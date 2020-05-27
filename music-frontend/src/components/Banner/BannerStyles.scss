@@ -1,0 +1,15 @@
+@import '../../sass/styles.scss';
+
+.cp-banner {
+    height: 350px;
+    background-position: center 70%;
+    background-size: cover;
+    &__promo {
+        padding: 3rem;
+        &__copy {
+            font-size: 45px;
+            color: $darkGray;
+            max-width: 360px;
+        }
+    }
+}

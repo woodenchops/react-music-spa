@@ -1,0 +1,35 @@
+.cp-album-row-section {
+    background-color: #000;
+    padding-bottom: 2rem;
+    .row-title {
+        padding: 0 20px;
+        margin-bottom: 1rem;
+    }
+    &__row {
+        color: #fff;
+        margin-bottom: 3rem;
+        &__album-container {
+            display: flex;
+            justify-content: center;
+        }
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+        &__album {
+            height: 100%;
+            flex-basis: 200px;
+            margin: 0 2.5px;
+            background-position: center;
+            background-size: cover;
+            .album-info {
+                display: block;
+            }
+            .album-fine-print {
+                color: $lightCharcoalGray;
+            }
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

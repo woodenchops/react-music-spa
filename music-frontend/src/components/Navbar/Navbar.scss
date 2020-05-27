@@ -1,0 +1,15 @@
+@import '../../sass/styles.scss';
+
+.cp-nav {
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    &__upper {
+        height: 50px;
+        background-color: $lightGray;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}

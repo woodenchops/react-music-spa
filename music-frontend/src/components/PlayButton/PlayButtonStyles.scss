@@ -1,0 +1,19 @@
+@import '../../sass/styles.scss';
+
+
+.cp-play-icon {
+    background-color: red;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    &--dark {
+        background-color: $darkGray;
+    }
+    img {
+        width: 30px;
+        position: absolute;
+        left: calc(50% - 12px);
+        top: calc(50% - 16px);
+    }
+}
