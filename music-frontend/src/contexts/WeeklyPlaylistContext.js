@@ -11,8 +11,8 @@ export class WeeklyPlaylistProvider extends Component {
             const data = res;
             this.setState({
                 playlistAll: [...data],
-                playlistOne: [...data.splice(0, 5)],
-                playlistTwo: [...data.splice(0, 5)]
+                playlistOne: [...data.splice(0, 4)],
+                playlistTwo: [...data.splice(0, 4)]
             });
 
         }
