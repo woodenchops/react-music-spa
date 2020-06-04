@@ -12,14 +12,17 @@ import { HeaderProvider } from './contexts/HeaderContext';
 import { NewReleaseProvider } from './contexts/NewReleasesContext';
 import { RecommendedProvider } from './contexts/RecommendedContext';
 import { WeeklyPlaylistProvider } from './contexts/WeeklyPlaylistContext';
+import { UserProvider } from './contexts/UserContext';
 
 
 function App() {
   return (
     <div className="App">
           <MasterProvider>
-            
-            <NavBar/>
+
+            <UserProvider>
+               <NavBar/>
+            </UserProvider>
        
             <HeaderProvider>
               <Header/>

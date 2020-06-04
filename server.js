@@ -9,12 +9,14 @@ app.use(express.urlencoded({
 }));
 app.use(express.json());
 
+const userProfileApi = require('./Routes/UserProfile');
 const headerApi = require('./Routes/HeaderRoute');
 const newReleasesApi = require('./Routes/NewReleasesRoute');
 const recommendedApi = require('./Routes/RecommededRoute');
 const bannerApi = require('./Routes/BannerRoute');
 const weeklyPlaylistApi = require('./Routes/WeeklyPlayListRoute');
 
+app.use('/api/user', userProfileApi);
 app.use('/api/header', headerApi);
 app.use('/api/new-releases', newReleasesApi);
 app.use('/api/recommeded', recommendedApi);

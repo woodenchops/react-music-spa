@@ -1,11 +1,9 @@
 const express = require('express');
 const router = express.Router();
+const bannerController = require('../controllers/bannerController');
 
-router.get('/', (req, res) => {
-    res.status(200).json([{
-       msg: 'Banner route'
-    }]);
-});
-
+router
+.route('/')
+.get(bannerController.getBanner)
 
 module.exports = router;

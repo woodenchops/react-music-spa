@@ -2,6 +2,7 @@ import React from 'react';
 import './NavMenu.scss';
 
 const NavMenu = () => {
+
     return ( 
         <ul className="cp-nav__ul">
             <li className="p-nav__li">New Releases</li>
