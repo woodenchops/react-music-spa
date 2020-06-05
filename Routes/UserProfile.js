@@ -1,10 +1,11 @@
 const express = require('express');
 const router = express.Router();
+const User = require('../models/userModel');
 
 router.get('/', (req, res) => {
-    res.status(200).json([{
-        userName: 'Kristian',
-    }]);
+    User.find()
+    .then(user => res.json(user))
+    .catch(err => res.status(400).json('Error:' + err)); 
 });
 
 

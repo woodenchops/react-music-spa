@@ -1,5 +1,16 @@
 const express = require('express');
+const mongoose = require('mongoose');
+const dotenv = require('dotenv');
 const cors = require('cors');
+
+dotenv.config({ path: './config.env'});
+
+mongoose.connect(process.env.DBCONNECTION, {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
+    useUnifiedTopology: true
+}).then(() => console.log('DB CONNECTION SUCCESSFUL'))
 
 const app = express();
 
@@ -24,6 +35,6 @@ app.use('/api/banner', bannerApi);
 app.use('/api/weekly-playlist', weeklyPlaylistApi);
 
 
-const PORT = 5000;
+const PORT = process.env.PORT;
 
 app.listen(PORT, () => console.log(`server started on port ${PORT}`));
